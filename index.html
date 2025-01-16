@@ -5,12 +5,15 @@
     <title>About Fawn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      :root {
+        font-family: sans-serif, system-ui;
+      }
     </style>
   </head>
   <body>
     <main>
       <h1>Fawn Sannar</h1>
-      <img class="profile-image" src="img/self.jpg" alt="A picture of me">
+      <img src="img/self.jpg" alt="A picture of me" width="500" height="500">
       <h2>Personal info</h2>
       <ul>
         <li><strong>Major:</strong>Computer Science</li>
@@ -39,16 +42,14 @@
           <a href="https://en.wikipedia.org/wiki/Susanna_Clarke">Susanna Clarke</a></li>
       </ol>
       <h2>Meow</h2>
-      <p class=haiku>I will chew your wires<br>I will jump upon your head<br>I know you love me</p>
+      <blockquote>I will chew your wires<br>I will jump upon your head<br>I know you love me</blockquote>
       <p>I have two cats, Root and Mochi. They are mischevious little beasts who constantly cause trouble. I love them both very much.</p>
       <h2>My personal interests</h2>
       <p></p>
       <p></p>
       <p></p>
       <h2>Class schedule</h2>
-      <!-- Cell spacing and cell padding set using CSS, since
-      cellspacing and cellpadding attributes are deprecated -->
-      <table>
+      <table cellspacing="3" cellpadding="3" border="1">
         <thead>
           <tr>
             <th scope="col"></th>
@@ -62,11 +63,11 @@
         <tbody>
           <tr>
             <th scope="row">09:00</th>
-            <td rowspan=17  class="bg-light">Work</td>
+            <td rowspan=17  bgcolor="#a2a5ab" text="#404248">Work</td>
             <td rowspan=5><!-- This cell is not missing, just invisible! --></td>
-            <td rowspan=17  class="bg-light">Work</td>
+            <td rowspan=17  bgcolor="#a2a5ab" text="#404248">Work</td>
             <td rowspan=5><!-- This cell is not missing, just invisible! --></td>
-            <td rowspan=17  class="bg-light">Work</td>
+            <td rowspan=17  bgcolor="#a2a5ab" text="#404248">Work</td>
           </tr>
           <tr>
             <th scope="row">09:30</th>
@@ -82,8 +83,8 @@
           </tr>
           <tr>
             <th scope="row">11:30</th>
-            <td rowspan=3  class="bg-green">CS 305G</td>
-            <td rowspan=3  class="bg-green">CS 305G</td>
+            <td rowspan=3  bgcolor="#2fdc88" text="#0d0f14">CS 305G</td>
+            <td rowspan=3  bgcolor="#2fdc88" text="#0d0f14">CS 305G</td>
           </tr>
           <tr>
             <th scope="row">12:00</th>
@@ -93,8 +94,8 @@
           </tr>
           <tr>
             <th scope="row">13:00</th>
-            <td rowspan=3  class="bg-cyan">CS 2420</td>
-            <td rowspan=3  class="bg-cyan">CS 2420</td>
+            <td rowspan=3  bgcolor="#20d3db" text="#0d0f14">CS 2420</td>
+            <td rowspan=3  bgcolor="#20d3db" text="#0d0f14">CS 2420</td>
           </tr>
           <tr>
             <th scope="row">13:30</th>
@@ -104,8 +105,8 @@
           </tr>
           <tr>
             <th scope="row">14:30</th>
-            <td rowspan=3  class="bg-magenta">CS 2550</td>
-            <td rowspan=3  class="bg-magenta">CS 2550</td>
+            <td rowspan=3  bgcolor="#fe7ccb" text="#0d0f14">CS 2550</td>
+            <td rowspan=3  bgcolor="#fe7ccb" text="#0d0f14">CS 2550</td>
           </tr>
           <tr>
             <th scope="row">15:00</th>
@@ -115,8 +116,8 @@
           </tr>
           <tr>
             <th scope="row">16:00</th>
-            <td rowspan=3  class="bg-yellow">COMM 2110</td>
-            <td rowspan=3  class="bg-yellow">COMM 2110</td>
+            <td rowspan=3  bgcolor="#fdb500" text="#0d0f14">COMM 2110</td>
+            <td rowspan=3  bgcolor="#fdb500" text="#0d0f14">COMM 2110</td>
           </tr>
           <tr>
             <th scope="row">16:30</th>
