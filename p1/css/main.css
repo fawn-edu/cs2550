@@ -68,11 +68,12 @@ thead th:not(:empty) {
   max-width: 500px;
   aspect-ratio: 1;
 	object-fit: contain;
+	float: right;
 }
 
 .haiku {
 	font-style: italic;
-	padding-inline-start: 3ch;
+	padding-inline-start: 1ch;
 	width: fit-content;
 	text-align: center;
 }
