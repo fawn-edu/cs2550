@@ -1,26 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-	font-family: "Inter", sans-serif, system-ui;
+  font-family: Inter, sans-serif;
 
-	transition-duration: 90ms;
-
-	--red: oklch(68% 0.20 015);
-	--light-red: oklch(76% 0.14 015);
-	--orange: oklch(76% 0.16 055);
-	--light-orange: oklch(82% 0.12 055);
 	--yellow: oklch(82% 0.17 080);
-	--light-yellow: oklch(88% 0.12 082);
 	--green: oklch(79% 0.18 156);
-	--light-green: oklch(88% 0.16 156);
 	--cyan: oklch(79% 0.13 200);
-	--light-cyan: oklch(88% 0.14 200);
 	--blue: oklch(72% 0.15 270);
-	--light-blue: oklch(79% 0.12 270);
 	--violet: oklch(76% 0.17 310);
-	--light-violet: oklch(82% 0.12 310);
 	--magenta: oklch(76% 0.18 345);
-	--light-magenta: oklch(82% 0.14 345);
+
 	--darkest: oklch(17% 0.01 266);
 	--darker: oklch(29% 0.01 266);
 	--dark: oklch(38% 0.01 266);
@@ -44,22 +33,11 @@ body {
 main {
 	max-width: 79ch;
 	margin-inline: 1ch;
-	overflow: scroll;
+  overflow: scroll;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: "Inter Tight";
-	font-weight: 900;
-}
-
-ol,
-ul {
-	padding-inline-start: 3ch;
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: "Inter Tight", sans-serif;
 }
 
 a {
@@ -76,40 +54,20 @@ a:hover {
 	text-decoration: 2px underline;
 }
 
-.profile-image {
-	max-width: 500px;
-	max-height: 500px;
-	object-fit: contain;
-}
-
-table {
-	border: 1px solid var(--dark);
-	border-spacing: 3px;
-	border-radius: 6px;
-}
-
 table * {
 	text-align: start;
 	vertical-align: top;
 }
 
-th,
-td {
-	padding: 3px;
-	border-radius: 3px;
+thead th:not(:empty) {
+	min-width: 9ch;
 }
 
-:where(th, td):not(:empty) {
-	border: 1px solid var(--dark);
-	background-color: var(--darkest);
-}
-
-thead th {
-	width: 9ch;
-}
-
-:where(th, td)[class*="bg-"] {
-	border: none;
+.profile-image {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+	object-fit: contain;
 }
 
 .haiku {

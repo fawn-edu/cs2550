@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<!-- lore goes here -->
 <html>
   <head>
     <title>About Fawn</title>
+    <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      :root {
-        font-family: sans-serif, system-ui;
-      }
-    </style>
   </head>
-  <body bgcolor="#0d0f14" text="#f5f8ff">
+  <body>
     <main>
       <h1>Fawn Sannar</h1>
-      <img src="img/self.jpg" alt="A picture of me" width="500" height="500">
+      <img class="profile-image" src="https://place-hold.it/500" alt="A picture of me">
+      <!-- <img class="profile-image" src="./self.jpg" alt="A picture of me"> -->
       <h2>Personal info</h2>
       <ul>
-        <li><strong>Major:</strong>Computer Science</li>
-        <li><strong>High school:</strong>Maple Mountain High School, class of 2017</li>
-        <li><strong>Year at UVU:</strong>Year 1, but actually 9, but actually actually 3 (it's complicated)</li>
-        <li><strong>Favorite flavor of ice cream:</strong>Graham cracker</li>
+        <li><strong>Major: </strong>Computer Science</li>
+        <li><strong>High school: </strong>Maple Mountain High School, class of 2017</li>
+        <li><strong>Year at UVU: </strong>Year 1, but actually 9, but actually actually 3 (it's complicated)</li>
+        <li><strong>Favorite flavor of ice cream: </strong>Graham cracker</li>
       </ul>
       <h2>My five favorite books</h2>
       <ol>
-        <li><i>The Night Circus</i>
-          by
+        <li><i>The Night Circus</i> by
           <a href="https://erinmorgenstern.com/writing/the-night-circus/">Erin Morgenstern</a></li>
-        <li><i>Annihilation</i>
-          by
+        <li><i>Annihilation</i> by
           <a href="https://www.jeffvandermeer.com/book">Jeff Vandermeer</a></li>
-        <li><i>Howl's Moving Castle</i>
-          by
+        <li><i>Howl's Moving Castle</i> by
           <!-- Diana Wynne Jones does not have a website, but has officially endorsed this fan-site.-->
           <a href="http://www.dianawynnejones.com/index.html">Diana Wynne Jones</a></li>
-        <li><i>This Is How You Lose the Time War</i>
-          by
+        <li><i>This Is How You Lose the Time War</i> by
           <a href="https://amalelmohtar.com/bibliography/">Amal El-Mohtar</a></li>
-        <li><i>Piranesi</i>
-          by
+        <li><i>Piranesi</i> by
           <!-- Susanna Clarke does not have a website. Wikipedia will have to do -->
           <a href="https://en.wikipedia.org/wiki/Susanna_Clarke">Susanna Clarke</a></li>
       </ol>
       <h2>Meow</h2>
-      <blockquote>I will chew your wires<br>I will jump upon your head<br>I know you love me</blockquote>
+      <p class=haiku>I will chew your wires<br>I will jump upon your head<br>I know you love me</p>
       <p>I have two cats, Root and Mochi. They are mischevious little beasts who constantly cause trouble. I love them both very much.</p>
       <h2>My personal interests</h2>
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
-      <p>Paragraph 3</p>
+      <p>TODO: write three paragraphs</p>
+      <p>Sampel text</p>
+      <p>lego frog</p>
       <h2>Class schedule</h2>
+      <!--
+      Yucky nasty deprecated attributes!! This will look much nicer in
+      project 2 where I am allowed to use CSS here instead
+      -->
       <table cellspacing="3" cellpadding="3" border="1">
         <thead>
           <tr>
@@ -63,68 +58,44 @@
         <tbody>
           <tr>
             <th scope="row">09:00</th>
-            <td rowspan=17  bgcolor="#a2a5ab" text="#0d0f14">Work</td>
+            <td rowspan=17  class="bg-light">Work</td>
             <td rowspan=5><!-- This cell is not missing, just invisible! --></td>
-            <td rowspan=17  bgcolor="#a2a5ab" text="#0d0f14">Work</td>
+            <td rowspan=17  class="bg-light">Work</td>
             <td rowspan=5><!-- This cell is not missing, just invisible! --></td>
-            <td rowspan=17  bgcolor="#a2a5ab" text="#0d0f14">Work</td>
+            <td rowspan=17  class="bg-light">Work</td>
           </tr>
-          <tr>
-            <th scope="row">09:30</th>
-          </tr>
-          <tr>
-            <th scope="row">10:00</th>
-          </tr>
-          <tr>
-            <th scope="row">10:30</th>
-          </tr>
-          <tr>
-            <th scope="row">11:00</th>
-          </tr>
+          <tr><th scope="row">09:30</th></tr>
+          <tr><th scope="row">10:00</th></tr>
+          <tr><th scope="row">10:30</th></tr>
+          <tr><th scope="row">11:00</th></tr>
           <tr>
             <th scope="row">11:30</th>
-            <td rowspan=3  bgcolor="#2fdc88" text="#0d0f14">CS 305G</td>
-            <td rowspan=3  bgcolor="#2fdc88" text="#0d0f14">CS 305G</td>
+            <td rowspan=3  class="bg-green">CS 305G</td>
+            <td rowspan=3  class="bg-green">CS 305G</td>
           </tr>
-          <tr>
-            <th scope="row">12:00</th>
-          </tr>
-          <tr>
-            <th scope="row">12:30</th>
-          </tr>
+          <tr><th scope="row">12:00</th></tr>
+          <tr><th scope="row">12:30</th></tr>
           <tr>
             <th scope="row">13:00</th>
-            <td rowspan=3  bgcolor="#20d3db" text="#0d0f14">CS 2420</td>
-            <td rowspan=3  bgcolor="#20d3db" text="#0d0f14">CS 2420</td>
+            <td rowspan=3  class="bg-cyan">CS 2420</td>
+            <td rowspan=3  class="bg-cyan">CS 2420</td>
           </tr>
-          <tr>
-            <th scope="row">13:30</th>
-          </tr>
-          <tr>
-            <th scope="row">14:00</th>
-          </tr>
+          <tr><th scope="row">13:30</th></tr>
+          <tr><th scope="row">14:00</th></tr>
           <tr>
             <th scope="row">14:30</th>
-            <td rowspan=3  bgcolor="#fe7ccb" text="#0d0f14">CS 2550</td>
-            <td rowspan=3  bgcolor="#fe7ccb" text="#0d0f14">CS 2550</td>
+            <td rowspan=3  class="bg-magenta">CS 2550</td>
+            <td rowspan=3  class="bg-magenta">CS 2550</td>
           </tr>
-          <tr>
-            <th scope="row">15:00</th>
-          </tr>
-          <tr>
-            <th scope="row">15:30</th>
-          </tr>
+          <tr><th scope="row">15:00</th></tr>
+          <tr><th scope="row">15:30</th></tr>
           <tr>
             <th scope="row">16:00</th>
-            <td rowspan=3  bgcolor="#fdb500" text="#0d0f14">COMM 2110</td>
-            <td rowspan=3  bgcolor="#fdb500" text="#0d0f14">COMM 2110</td>
+            <td rowspan=3  class="bg-yellow">COMM 2110</td>
+            <td rowspan=3  class="bg-yellow">COMM 2110</td>
           </tr>
-          <tr>
-            <th scope="row">16:30</th>
-          </tr>
-          <tr>
-            <th scope="row">17:00</th>
-          </tr>
+          <tr><th scope="row">16:30</th></tr>
+          <tr><th scope="row">17:00</th></tr>
         </tbody>
       </table>
     </main>
