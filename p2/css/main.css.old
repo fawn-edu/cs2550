@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  font-family: Inter, sans-serif;
+	font-family: "Inter", sans-serif, system-ui;
 
+	transition-duration: 90ms;
+
+	--red: oklch(68% 0.20 015);
+	--light-red: oklch(76% 0.14 015);
+	--orange: oklch(76% 0.16 055);
+	--light-orange: oklch(82% 0.12 055);
 	--yellow: oklch(82% 0.17 080);
+	--light-yellow: oklch(88% 0.12 082);
 	--green: oklch(79% 0.18 156);
+	--light-green: oklch(88% 0.16 156);
 	--cyan: oklch(79% 0.13 200);
+	--light-cyan: oklch(88% 0.14 200);
 	--blue: oklch(72% 0.15 270);
+	--light-blue: oklch(79% 0.12 270);
 	--violet: oklch(76% 0.17 310);
+	--light-violet: oklch(82% 0.12 310);
 	--magenta: oklch(76% 0.18 345);
-
+	--light-magenta: oklch(82% 0.14 345);
 	--darkest: oklch(17% 0.01 266);
 	--darker: oklch(29% 0.01 266);
 	--dark: oklch(38% 0.01 266);
@@ -33,13 +44,22 @@ body {
 main {
 	max-width: 79ch;
 	margin-inline: 1ch;
-  overflow: scroll;
+	overflow: scroll;
 }
 
-:where(h1, h2, h3, h4, h5, h6) {
-  font-family: "Inter Tight", sans-serif;
-  margin-top: .75em;
-  margin-bottom: .15em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Inter Tight";
+	font-weight: 900;
+}
+
+ol,
+ul {
+	padding-inline-start: 3ch;
 }
 
 a {
@@ -56,14 +76,16 @@ a:hover {
 	text-decoration: 2px underline;
 }
 
-p {
-	text-indent: 4ch;
+.profile-image {
+	max-width: 500px;
+	max-height: 500px;
+	object-fit: contain;
 }
 
 table {
 	border: 1px solid var(--dark);
-	border-spacing: .333ch;
-	border-radius: .5rem;
+	border-spacing: 3px;
+	border-radius: 6px;
 }
 
 table * {
@@ -73,8 +95,8 @@ table * {
 
 th,
 td {
-	padding: .333ch;
-	border-radius: .5rem;
+	padding: 3px;
+	border-radius: 3px;
 }
 
 :where(th, td):not(:empty) {
@@ -82,37 +104,19 @@ td {
 	background-color: var(--darkest);
 }
 
-thead th:not(:empty) {
-	min-width: 9ch;
+thead th {
+	width: 9ch;
 }
 
-h1.title {
-	transform: scaleX(1.41421356237);
-	transform-origin: left;
-	font-size: 3rem;
-	width: fit-content;
-	color: transparent;
-	background: linear-gradient(33deg, var(--magenta), var(--violet), var(--blue));
-	background-clip: text;
-}
-
-.profile-image {
-  width: 100%;
-  max-width: 500px;
-  aspect-ratio: 1;
-	object-fit: contain;
-	float: right;
-	border: 4px solid var(--violet);
-	border-radius: 1rem;
-	margin: 1ch;
+:where(th, td)[class*="bg-"] {
+	border: none;
 }
 
 .haiku {
 	font-style: italic;
-	padding-inline-start: 1ch;
+	padding-inline-start: 3ch;
 	width: fit-content;
 	text-align: center;
-	text-indent: 0;
 }
 
 .bg-light {
