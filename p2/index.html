@@ -4,11 +4,12 @@
     <title>About Fawn</title>
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/main.js" defer></script>
   </head>
   <body>
     <main>
       <h1 class="title">Fawn Sannar</h1>
-      <img class="profile-image" src="./self500.jpg" alt="A picture of me">
+      <img id="profile-image-clickable" class="profile-image" src="./self500.jpg" alt="A picture of me">
       <h2>Personal info</h2>
       <ul>
         <li><strong>Major: </strong>Computer Science</li>
@@ -93,6 +94,13 @@
           <tr><th scope="row">17:00</th></tr>
         </tbody>
       </table>
+
+      <dialog>
+        <form method="dialog">
+          <h1><button autofocus>❌</button>picture of me</h1>
+          <img class="profile-image" src="./self500.jpg" alt="A picture of me">
+        </form>
+      </dialog>
     </main>
   </body>
 </html>
