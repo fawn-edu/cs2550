@@ -1,1 +1,57 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --col-paper: oklch(94% 0.015 66);
+  --col-ink: oklch(22% 0.02 255);
+
+  background-color: var(--col-paper);
+  color: var(--col-ink);
+  font: 1.2rem 'Spectral', serif;
+}
+
+body {
+  height: 100dvh;
+  display: grid;
+  grid-template: "nav body" 1fr "nav footer" auto / minmax(min-content, 1fr) 3fr;
+  align-items: start;
+}
+
+.content {
+  display: grid;
+  grid-area: body;
+  grid-template-columns: auto 3fr 1fr;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Pirata One', serif;
+}
+
+.content> :is(h1, h2, h3, h4, h5, h6) {
+  text-align: end;
+  grid-column: 1;
+}
+
+.content>p {
+  grid-column: 2;
+  align-self: flex-end;
+}
+
+.content>* {
+  grid-column: 3;
+  margin: 0;
+}
+
+header,
+footer {
+  color: var(--col-paper);
+  background-color: var(--col-ink);
+}
+
+header {
+  grid-area: nav;
+}
+
+footer {
+  grid-area: footer;
+}
