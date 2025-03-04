@@ -55,3 +55,26 @@ header {
 footer {
   grid-area: footer;
 }
+
+@media (width < 786px) {
+  body {
+    grid-template: "nav" auto "body" 1fr "footer" auto / 1fr;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .content> :is(h1, h2, h3, h4, h5, h6) {
+    text-align: start;
+    grid-column: 1;
+  }
+
+  .content>p {
+    grid-column: 1;
+  }
+
+  .content>* {
+    grid-column: 1;
+  }
+}
