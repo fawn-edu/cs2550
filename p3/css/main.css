@@ -1,26 +1,46 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Pirata+One&display=swap');
 
 :root {
   --col-paper: oklch(94% 0.015 66);
   --col-ink: oklch(22% 0.02 255);
+  --col-ink-faint: oklch(40% 0.01 44);
 
   background-color: var(--col-paper);
   color: var(--col-ink);
-  font: 1.2rem 'Spectral', serif;
+  font: 1.2rem 'Eczar', serif;
 }
 
 body {
   height: 100dvh;
   display: grid;
-  grid-template: "nav body" 1fr "nav footer" auto / minmax(min-content, 1fr) 3fr;
+  grid-template: "nav body" 1fr "nav footer" auto / minmax(min-content, 1fr) 5fr;
   align-items: start;
+}
+
+thead {
+  font-weight: bold;
+}
+
+aside {
+  font-style: italic;
+  color: var(--col-ink-faint);
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--blue0);
+}
+
+a:visited {
+  color: var(--violet0);
 }
 
 .content {
   display: grid;
   grid-area: body;
-  grid-template-columns: auto 3fr 1fr;
+  grid-template-columns: minmax(min-content, auto) 1fr;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -30,20 +50,24 @@ body {
 .content> :is(h1, h2, h3, h4, h5, h6) {
   text-align: end;
   grid-column: 1;
+  padding: 0;
+  margin-top: calc(1em - 1lh);
 }
 
-.content>p {
-  grid-column: 2;
-  align-self: flex-end;
+.content>:is(ol, ul) {
+  padding-inline-start: 3ch;
 }
 
 .content>* {
-  grid-column: 3;
+  max-width: 72ch;
+  grid-column: 2;
+  align-self: flex-start;
   margin: 0;
 }
 
 header,
-footer {
+footer,
+thead {
   color: var(--col-paper);
   background-color: var(--col-ink);
 }
@@ -56,9 +80,17 @@ footer {
   grid-area: footer;
 }
 
+#title {
+  text-align: center;
+}
+
 @media (width < 786px) {
   body {
     grid-template: "nav" auto "body" 1fr "footer" auto / 1fr;
+  }
+
+  p {
+    text-indent: 2ch;
   }
 
   .content {
@@ -76,5 +108,6 @@ footer {
 
   .content>* {
     grid-column: 1;
+    padding-top: 0;
   }
 }
