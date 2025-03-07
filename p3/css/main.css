@@ -8,7 +8,8 @@
 
   background-color: var(--col-paper);
   color: var(--col-ink);
-  font: 1.2rem 'Eczar', serif;
+  font-family: 'Eczar', serif;
+  font-variant-numeric: tabular-nums;
 }
 
 body {
@@ -35,6 +36,23 @@ a {
 
 a:visited {
   color: var(--violet0);
+}
+
+table td {
+  padding: var(--zs-rem);
+}
+
+.todo {
+  font-style: normal;
+  background-color: var(--col-ink-faint);
+  color: var(--col-paper);
+  border-radius: var(--zs-rem);
+  padding: var(--zs-rem);
+}
+
+.todo::before {
+  content: 'TODO: ';
+  font-weight: bold;
 }
 
 .content {
